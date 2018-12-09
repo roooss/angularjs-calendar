@@ -18,6 +18,8 @@ gulp.task('scripts', function () {
     //Compile only our general scripts
     gulp.src([
         './prebuild_assets/js/script.js',
+        './prebuild_assets/js/factories/**/*.js',
+        './prebuild_assets/js/services/**/*.js',
         './prebuild_assets/js/calendarController.js'
     ])
         //.pipe(uglify())
@@ -60,5 +62,6 @@ gulp.task('serve', ['scripts', 'styles'], function() {
     });
 
     gulp.watch(['./prebuild_assets/scss/**/*.scss'], ['styles']);
+    gulp.watch(['./prebuild_assets/js/**/*.js'], ['scripts']);
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
