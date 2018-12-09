@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Calendar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/app.css" />
+        <script type="text/javascript" src="/assets/js/vendor.js"></script>
+        <script type="text/javascript" src="/assets/js/app.js"></script>
+    </head>
+    <body ng-app="calendarBooking">
+        <div class="maincontent">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h2 class="">Paying for yourself?</h2>
+                        <div class="booking-date-panel">
+                            <div class="container">
+                                <div class="row clearfix no-gutters top-border">
+                                    <div class="container">
+                                        <div class="row">
+                                            <h2>Please select an appointment</h2>
+                                        </div>
+                                        <div ng-controller="CalendarController" ng-init="init()">
+                                            <div class="row">
+                                                <div class="col-md-4 column">
+                                                    <div class="tl-outer">
+                                                        <p class="booking-day">Monday</p>
+                                                        <p class="booking-long-date">June 14, 2017, at 11:30</p>
+                                                        <p class="booking-long-date">{{today}}</p>
+                                                        <p class="booking-long-date">
+                                                            <p ng-repeat="number in daysArray track by $index">{{number}}</p>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 column">
+                                                    <div class="calendar-spinner center-grow">
+                                                        <div class="lds-css ng-scope">
+                                                            <div class="lds-spin" style="100%;height:100%"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+                                                        </div>
+                                                    </div>
+                                                    <table class="table table-calendar left-right-border">
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="1">
+                                                                    <span class="btn-group">
+                                                                        <a class=""><i class="fa fa-chevron-left"></i></a>
+                                                                    </span>
+                                                                </th>
+                                                                <th colspan="5">
+                                                                    <h2 class="align-self-lg-center">February</h2>
+                                                                </th>
+                                                                <th colspan="1">
+                                                                    <span class="btn-group">
+                                                                        <a class=""><i class="fa fa-chevron-right"></i></a>
+                                                                    </span>
+                                                                </th>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>S</th>
+                                                                <th>M</th>
+                                                                <th>T</th>
+                                                                <th>W</th>
+                                                                <th>T</th>
+                                                                <th>F</th>
+                                                                <th>S</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td class="muted"><a href="#" class="">29</a></td>
+                                                                <td class="muted"><a href="#" class="">30</a></td>
+                                                                <td class="muted"><a href="#" class="">31</a></td>
+                                                                <td><a href="#" class="">1</a></td>
+                                                                <td><a href="#" class="">2</a></td>
+                                                                <td><a href="#" class="">3</a></td>
+                                                                <td><a href="#" class="">4</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#" class="">5</a></td>
+                                                                <td><a href="#" class="">6</a></td>
+                                                                <td><a href="#" class="">7</a></td>
+                                                                <td><a href="#" class="">8</a></td>
+                                                                <td><a href="#" class="">9</a></td>
+                                                                <td><a href="#" class="">10</a></td>
+                                                                <td><a href="#" class="">11</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#" class="">12</a></td>
+                                                                <td><a href="#" class="">13</a></td>
+                                                                <td><a href="#" class="">14</a></td>
+                                                                <td><a href="#" class="">15</a></td>
+                                                                <td><a href="#" class="">16</a></td>
+                                                                <td><a href="#" class="">17</a></td>
+                                                                <td><a href="#" class="">18</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#" class="">19</a></td>
+                                                                <td><a href="#" class="btn btn-date btn-circle"><strong>20</strong></a></td>
+                                                                <td><a href="#" class="">21</a></td>
+                                                                <td><a href="#" class="">22</a></td>
+                                                                <td><a href="#" class="">23</a></td>
+                                                                <td><a href="#" class="">24</a></td>
+                                                                <td><a href="#" class="">25</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#" class="">26</a></td>
+                                                                <td><a href="#" class="">27</a></td>
+                                                                <td><a href="#" class="">28</a></td>
+                                                                <td><a href="#" class="">29</a></td>
+                                                                <td class="muted"><a href="#" class="">1</a></td>
+                                                                <td class="muted"><a href="#" class="">2</a></td>
+                                                                <td class="muted"><a href="#" class="">3</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="col-md-4 column">
+                                                    <div class="time-spinner center-grow">
+                                                        <div class="lds-css ng-scope">
+                                                            <div class="lds-spin" style="100%;height:100%"><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+                                                        </div>
+                                                    </div>
+                                                    <table class="table table-times">
+                                                        <thead>
+                                                            <tr>
+                                                                <th colspan="5">
+                                                                    <h2 class="">Time</h2>
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="#" class="">10:00</a></td>
+                                                                <td><a href="#" class="btn btn-rounded">10:30</a></td>
+                                                                <td><a href="#" class="">11:00</a></td>
+                                                                <td><a href="#" class="">11:30</a></td>
+                                                                <td><a href="#" class="">12:00</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><a href="#" class="">12:30</a></td>
+                                                                <td><a href="#" class="">13:00</a></td>
+                                                                <td><a href="#" class="">13:30</a></td>
+                                                                <td><a href="#" class="">14:00</a></td>
+                                                                <td><a href="#" class="">14:30</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="row clearfix no-gutters top-border bottom-border">
+                                    <div class="container select-appointment-message-panel">
+                                        <h2 class="">Please select a appointment time and date above</h2>
+                                        <p>This may be covered if you have private insurance. Please check with your insurer before booking.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="container appointment-btn-zone">
+                                        <div class="col-12 text-center">
+                                            <div class="btn-group">
+                                                <a href="#" class="btn btn-lg">Next</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </body>
+</html>

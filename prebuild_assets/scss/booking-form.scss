@@ -1,0 +1,82 @@
+/* Booking area*/
+.bottom-border {
+    border-bottom: 2.4px solid #fc5960;
+}
+
+.top-border {
+    border-top: 2.4px solid #fc5960;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.left-right-border {
+    border-right: 2.4px solid #fc5960;
+    border-left: 2.4px solid #fc5960;
+    padding: 0px 10px;
+}
+
+.booking-long-date {
+    font-size: xx-large;
+}
+
+.booking-day {
+    font-size: x-large;
+}
+
+.table {
+    td, th {
+        border-top: none !important;
+    }
+}
+
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    padding: 6px 0px;
+    border-radius: 15px !important;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.btn-rounded {
+    border-radius: 3.25rem !important;
+}
+
+.btn-date {
+    border: none !important;
+    padding-top: 3px !important;
+    padding-right: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 0px !important;
+}
+
+.muted {
+
+}
+
+.table-times {
+    td, th {
+        border: none !important;
+        padding-top: 0px !important;
+        padding-right: .75rem !important;
+        padding-bottom: 0px !important;
+        padding-left: .75rem !important;
+    }
+}
+
+.table-times a, .table-calendar a {
+    color: black;
+}
+
+.table-times a {
+    padding: 0;
+}
+
+.table-times a.btn, .table-calendar a.btn {
+    color: white;
+}
+
+.appointment-btn-zone {
+    padding-top: 10px;
+}
